@@ -8,12 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		EC184E4827AB5B06002F9B5C /* KumparanTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC184E4727AB5B06002F9B5C /* KumparanTestApp.swift */; };
-		EC184E4A27AB5B06002F9B5C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC184E4927AB5B06002F9B5C /* ContentView.swift */; };
-		EC184E4C27AB5B09002F9B5C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC184E4B27AB5B09002F9B5C /* Assets.xcassets */; };
+		EC184E4A27AB5B06002F9B5C /* PostListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC184E4927AB5B06002F9B5C /* PostListView.swift */; };
+		EC184E4C27AB5B09002F9B5C /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC184E4B27AB5B09002F9B5C /* Color.xcassets */; };
 		EC184E4F27AB5B09002F9B5C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC184E4E27AB5B09002F9B5C /* Preview Assets.xcassets */; };
 		EC184E5927AB5B09002F9B5C /* KumparanTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC184E5827AB5B09002F9B5C /* KumparanTestTests.swift */; };
 		EC184E6327AB5B09002F9B5C /* KumparanTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC184E6227AB5B09002F9B5C /* KumparanTestUITests.swift */; };
 		EC184E6527AB5B09002F9B5C /* KumparanTestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC184E6427AB5B09002F9B5C /* KumparanTestUITestsLaunchTests.swift */; };
+		EC184E7427AB5B3F002F9B5C /* Image.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC184E7327AB5B3E002F9B5C /* Image.xcassets */; };
+		EC184E7627AB5B4A002F9B5C /* Icon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC184E7527AB5B4A002F9B5C /* Icon.xcassets */; };
+		EC184E7C27AB5BB3002F9B5C /* PostListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC184E7B27AB5BB3002F9B5C /* PostListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,14 +39,17 @@
 /* Begin PBXFileReference section */
 		EC184E4427AB5B06002F9B5C /* KumparanTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KumparanTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC184E4727AB5B06002F9B5C /* KumparanTestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KumparanTestApp.swift; sourceTree = "<group>"; };
-		EC184E4927AB5B06002F9B5C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		EC184E4B27AB5B09002F9B5C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EC184E4927AB5B06002F9B5C /* PostListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListView.swift; sourceTree = "<group>"; };
+		EC184E4B27AB5B09002F9B5C /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
 		EC184E4E27AB5B09002F9B5C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EC184E5427AB5B09002F9B5C /* KumparanTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KumparanTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC184E5827AB5B09002F9B5C /* KumparanTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KumparanTestTests.swift; sourceTree = "<group>"; };
 		EC184E5E27AB5B09002F9B5C /* KumparanTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KumparanTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC184E6227AB5B09002F9B5C /* KumparanTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KumparanTestUITests.swift; sourceTree = "<group>"; };
 		EC184E6427AB5B09002F9B5C /* KumparanTestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KumparanTestUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		EC184E7327AB5B3E002F9B5C /* Image.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Image.xcassets; sourceTree = "<group>"; };
+		EC184E7527AB5B4A002F9B5C /* Icon.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icon.xcassets; sourceTree = "<group>"; };
+		EC184E7B27AB5BB3002F9B5C /* PostListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,9 +100,8 @@
 		EC184E4627AB5B06002F9B5C /* KumparanTest */ = {
 			isa = PBXGroup;
 			children = (
-				EC184E4727AB5B06002F9B5C /* KumparanTestApp.swift */,
-				EC184E4927AB5B06002F9B5C /* ContentView.swift */,
-				EC184E4B27AB5B09002F9B5C /* Assets.xcassets */,
+				EC184E7127AB5B15002F9B5C /* Common */,
+				EC184E7827AB5B91002F9B5C /* PostList */,
 				EC184E4D27AB5B09002F9B5C /* Preview Content */,
 			);
 			path = KumparanTest;
@@ -125,6 +130,58 @@
 				EC184E6427AB5B09002F9B5C /* KumparanTestUITestsLaunchTests.swift */,
 			);
 			path = KumparanTestUITests;
+			sourceTree = "<group>";
+		};
+		EC184E7127AB5B15002F9B5C /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				EC184E7727AB5B59002F9B5C /* Base */,
+				EC184E7227AB5B1D002F9B5C /* Assets */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		EC184E7227AB5B1D002F9B5C /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				EC184E4B27AB5B09002F9B5C /* Color.xcassets */,
+				EC184E7327AB5B3E002F9B5C /* Image.xcassets */,
+				EC184E7527AB5B4A002F9B5C /* Icon.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		EC184E7727AB5B59002F9B5C /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				EC184E4727AB5B06002F9B5C /* KumparanTestApp.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		EC184E7827AB5B91002F9B5C /* PostList */ = {
+			isa = PBXGroup;
+			children = (
+				EC184E7A27AB5B9E002F9B5C /* ViewModel */,
+				EC184E7927AB5B98002F9B5C /* View */,
+			);
+			path = PostList;
+			sourceTree = "<group>";
+		};
+		EC184E7927AB5B98002F9B5C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EC184E4927AB5B06002F9B5C /* PostListView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EC184E7A27AB5B9E002F9B5C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EC184E7B27AB5BB3002F9B5C /* PostListViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,7 +289,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC184E4F27AB5B09002F9B5C /* Preview Assets.xcassets in Resources */,
-				EC184E4C27AB5B09002F9B5C /* Assets.xcassets in Resources */,
+				EC184E7427AB5B3F002F9B5C /* Image.xcassets in Resources */,
+				EC184E7627AB5B4A002F9B5C /* Icon.xcassets in Resources */,
+				EC184E4C27AB5B09002F9B5C /* Color.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,8 +316,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC184E4A27AB5B06002F9B5C /* ContentView.swift in Sources */,
+				EC184E4A27AB5B06002F9B5C /* PostListView.swift in Sources */,
 				EC184E4827AB5B06002F9B5C /* KumparanTestApp.swift in Sources */,
+				EC184E7C27AB5BB3002F9B5C /* PostListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
