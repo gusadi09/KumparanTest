@@ -11,4 +11,7 @@ enum KTLocalizable {
 
 	// MARK: - General
 	static let serverErrorText = NSLocalizedString("server_error_text", comment: "")
+
+	// MARK: - Post List View
+	static let postListViewNavigationTitle = NSLocalizedString("post_list_view_navigation_title" , comment: "")
 }
