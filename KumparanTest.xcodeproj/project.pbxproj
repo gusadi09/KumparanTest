@@ -24,6 +24,7 @@
 		EC184E8C27AB5F91002F9B5C /* KumparanTestTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC184E8B27AB5F91002F9B5C /* KumparanTestTargetType.swift */; };
 		EC184E8E27AB5FB1002F9B5C /* MoyaProvider+DefaultProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC184E8D27AB5FB1002F9B5C /* MoyaProvider+DefaultProvider.swift */; };
 		EC184E9027AB5FC7002F9B5C /* MoyaProvider+RequestAsync.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC184E8F27AB5FC7002F9B5C /* MoyaProvider+RequestAsync.swift */; };
+		EC184E9327AB6191002F9B5C /* KTErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC184E9227AB6191002F9B5C /* KTErrorMessage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		EC184E8B27AB5F91002F9B5C /* KumparanTestTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KumparanTestTargetType.swift; sourceTree = "<group>"; };
 		EC184E8D27AB5FB1002F9B5C /* MoyaProvider+DefaultProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MoyaProvider+DefaultProvider.swift"; sourceTree = "<group>"; };
 		EC184E8F27AB5FC7002F9B5C /* MoyaProvider+RequestAsync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MoyaProvider+RequestAsync.swift"; sourceTree = "<group>"; };
+		EC184E9227AB6191002F9B5C /* KTErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KTErrorMessage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +151,7 @@
 		EC184E7127AB5B15002F9B5C /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				EC184E9127AB6183002F9B5C /* Enum */,
 				EC184E8727AB5F5B002F9B5C /* Extension */,
 				EC184E8627AB5EF0002F9B5C /* Data */,
 				EC184E7727AB5B59002F9B5C /* Base */,
@@ -239,6 +242,14 @@
 				EC184E8B27AB5F91002F9B5C /* KumparanTestTargetType.swift */,
 			);
 			path = TargetType;
+			sourceTree = "<group>";
+		};
+		EC184E9127AB6183002F9B5C /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				EC184E9227AB6191002F9B5C /* KTErrorMessage.swift */,
+			);
+			path = Enum;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -386,6 +397,7 @@
 				EC184E4827AB5B06002F9B5C /* KumparanTestApp.swift in Sources */,
 				EC184E7C27AB5BB3002F9B5C /* PostListViewModel.swift in Sources */,
 				EC184E8E27AB5FB1002F9B5C /* MoyaProvider+DefaultProvider.swift in Sources */,
+				EC184E9327AB6191002F9B5C /* KTErrorMessage.swift in Sources */,
 				EC184E8C27AB5F91002F9B5C /* KumparanTestTargetType.swift in Sources */,
 				EC184E9027AB5FC7002F9B5C /* MoyaProvider+RequestAsync.swift in Sources */,
 			);
