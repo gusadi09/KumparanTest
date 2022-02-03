@@ -21,9 +21,9 @@ struct PostCardView: View {
 				.lineLimit(1)
 
 			HStack {
-				Text("username")
+				Text(viewModel.username)
 
-				Text("company name")
+				Text(viewModel.userCompanyName)
 
 				Spacer()
 			}
@@ -31,5 +31,8 @@ struct PostCardView: View {
 			.font(.footnote)
 		}
 		.contentShape(Rectangle())
+		.onAppear {
+			viewModel.onPostCardAppear()
+		}
     }
 }
