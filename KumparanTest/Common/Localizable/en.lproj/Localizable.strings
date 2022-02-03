@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  KumparanTest
+
+  Created by Gus Adi on 03/02/22.
+  
+*/
+
+// MARK: - General
+"server_error_text" = "Can't load data from server"

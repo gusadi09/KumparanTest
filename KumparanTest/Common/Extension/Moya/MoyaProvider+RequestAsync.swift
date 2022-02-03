@@ -30,7 +30,7 @@ extension MoyaProvider {
 
 								continuation.resume(returning: decodedData)
 							} else {
-								let errorMessage = KTErrorMessage.serverError(message: "Can't load data from server")
+								let errorMessage = KTErrorMessage.serverError(message: KTLocalizable.serverErrorText)
 
 								continuation.resume(throwing: errorMessage)
 							}
