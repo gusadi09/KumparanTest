@@ -8,21 +8,53 @@
 import SwiftUI
 
 struct PostListView: View {
+
+	@ObservedObject var viewModel = PostListViewModel()
+
 	var body: some View {
 		ZStack {
-			List(0...3, id: \.self) { item in
 
-				Button {
-					print("\(item)")
-				} label: {
-					PostCardView()
-						.padding(.vertical, 10)
+			Group {
+				if let postData = viewModel.postData {
+					List(postData.indices, id: \.self) { item in
+
+						Button {
+							print(postData[item].title ?? "")
+						} label: {
+							PostCardView(
+								viewModel: PostCardViewModel(
+									postItem: postData[item]
+								)
+							)
+								.padding(.vertical, 10)
+						}
+						.buttonStyle(PlainButtonStyle())
+
+					}
+					.listStyle(PlainListStyle())
+					.refreshable {
+						await viewModel.getPost()
+					}
+				} else if !viewModel.isLoading && viewModel.isPostDataEmpty(){
+					VStack {
+						Spacer()
+
+						Text("Uh oh, the data is empty :(")
+
+						Spacer()
+					}
 				}
-				.buttonStyle(PlainButtonStyle())
-
 			}
-			.listStyle(PlainListStyle())
+
+			if viewModel.isLoading {
+				ProgressView()
+					.progressViewStyle(.circular)
+			}
+
 		}
+		.onAppear(perform: {
+			viewModel.onPostAppear()
+		})
 		.navigationTitle(KTLocalizable.postListViewNavigationTitle)
 		.navigationBarTitleDisplayMode(.large)
 	}

@@ -8,5 +8,18 @@
 import Foundation
 
 final class PostCardViewModel: ObservableObject {
-	
+
+	@Published var postItem: Post
+
+	init(postItem: Post) {
+		self.postItem = postItem
+	}
+
+	func postTitle() -> String {
+		postItem.title ?? ""
+	}
+
+	func postBody() -> String {
+		postItem.body ?? ""
+	}
 }

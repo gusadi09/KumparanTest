@@ -8,12 +8,15 @@
 import SwiftUI
 
 struct PostCardView: View {
+
+	@ObservedObject var viewModel: PostCardViewModel
+
     var body: some View {
 		VStack(alignment: .leading, spacing: 10) {
-			Text("Post Title")
+			Text(viewModel.postTitle())
 				.font(.headline)
 
-			Text("Post Body")
+			Text(viewModel.postBody())
 				.font(.subheadline)
 				.lineLimit(1)
 
@@ -28,11 +31,5 @@ struct PostCardView: View {
 			.font(.footnote)
 		}
 		.contentShape(Rectangle())
-    }
-}
-
-struct PostCardView_Previews: PreviewProvider {
-    static var previews: some View {
-        PostCardView()
     }
 }
