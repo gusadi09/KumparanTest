@@ -11,7 +11,10 @@ import SwiftUI
 struct KumparanTestApp: App {
     var body: some Scene {
         WindowGroup {
-            PostListView()
-        }
-    }
+			NavigationView {
+				PostListView()
+			}
+			.navigationViewStyle(StackNavigationViewStyle())
+		}
+	}
 }

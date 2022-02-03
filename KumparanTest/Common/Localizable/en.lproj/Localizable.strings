@@ -7,4 +7,7 @@
 */
 
 // MARK: - General
-"server_error_text" = "Can't load data from server"
+"server_error_text" = "Can't load data from server";
+
+// MARK: - Post List View
+"post_list_view_navigation_title" = "Posts";
