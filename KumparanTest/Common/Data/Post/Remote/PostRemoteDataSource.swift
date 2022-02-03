@@ -6,3 +6,8 @@
 //
 
 import Foundation
+import Moya
+
+protocol PostRemoteDataSource {
+	func getPost() async throws -> PostResponse
+}

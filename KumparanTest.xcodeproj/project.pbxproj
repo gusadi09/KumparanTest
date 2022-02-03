@@ -33,6 +33,8 @@
 		EC184EB227AC38FF002F9B5C /* PostTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC184EB127AC38FF002F9B5C /* PostTargetType.swift */; };
 		EC184EB427AC3915002F9B5C /* PostRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC184EB327AC3915002F9B5C /* PostRemoteDataSource.swift */; };
 		EC184EB627AC3926002F9B5C /* PostDefaultRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC184EB527AC3926002F9B5C /* PostDefaultRemoteDataSource.swift */; };
+		EC184EB827AC3BB8002F9B5C /* PostRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC184EB727AC3BB8002F9B5C /* PostRepository.swift */; };
+		EC184EBA27AC3BCC002F9B5C /* PostDefaultRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC184EB927AC3BCC002F9B5C /* PostDefaultRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +80,8 @@
 		EC184EB127AC38FF002F9B5C /* PostTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTargetType.swift; sourceTree = "<group>"; };
 		EC184EB327AC3915002F9B5C /* PostRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRemoteDataSource.swift; sourceTree = "<group>"; };
 		EC184EB527AC3926002F9B5C /* PostDefaultRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDefaultRemoteDataSource.swift; sourceTree = "<group>"; };
+		EC184EB727AC3BB8002F9B5C /* PostRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRepository.swift; sourceTree = "<group>"; };
+		EC184EB927AC3BCC002F9B5C /* PostDefaultRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDefaultRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -333,6 +337,8 @@
 		EC184EAE27AC38AC002F9B5C /* Post */ = {
 			isa = PBXGroup;
 			children = (
+				EC184EB927AC3BCC002F9B5C /* PostDefaultRepository.swift */,
+				EC184EB727AC3BB8002F9B5C /* PostRepository.swift */,
 				EC184EAF27AC38CE002F9B5C /* Remote */,
 			);
 			path = Post;
@@ -500,6 +506,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC184E4A27AB5B06002F9B5C /* PostListView.swift in Sources */,
+				EC184EBA27AC3BCC002F9B5C /* PostDefaultRepository.swift in Sources */,
+				EC184EB827AC3BB8002F9B5C /* PostRepository.swift in Sources */,
 				EC184EA827AB7822002F9B5C /* Post.swift in Sources */,
 				EC184EB227AC38FF002F9B5C /* PostTargetType.swift in Sources */,
 				EC184E4827AB5B06002F9B5C /* KumparanTestApp.swift in Sources */,
