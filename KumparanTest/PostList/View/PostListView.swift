@@ -8,28 +8,72 @@
 import SwiftUI
 
 struct PostListView: View {
+
+	@ObservedObject var viewModel = PostListViewModel()
+
 	var body: some View {
 		ZStack {
-			List(0...3, id: \.self) { item in
 
-				Button {
-					print("\(item)")
-				} label: {
-					PostCardView()
-						.padding(.vertical, 10)
+			Group {
+				if !viewModel.isPostDataEmpty() {
+					List {
+
+						ForEach($viewModel.postData, id: \.id) { item in
+
+							Button {
+								print(item)
+							} label: {
+								PostCardView(
+									usersData: $viewModel.usersData,
+									postItem: item
+								)
+									.padding(.vertical, 10)
+							}
+							.buttonStyle(PlainButtonStyle())
+						}
+
+					}
+					.listStyle(PlainListStyle())
+
+				} else if !viewModel.isLoading && viewModel.isPostDataEmpty() {
+					VStack {
+						Spacer()
+
+						Text(KTLocalizable.dataEmptyText)
+
+						Spacer()
+					}
+
 				}
-				.buttonStyle(PlainButtonStyle())
+			}
+			.alert(isPresented: $viewModel.isError) {
+				Alert(
+					title: Text(KTLocalizable.attentionText),
+					message: Text(viewModel.errorMessageText()),
+					dismissButton: .default(
+						Text(KTLocalizable.okText)
+					)
+				)
+			}
+			
+
+			if viewModel.isLoading {
+				ProgressView()
+					.progressViewStyle(.circular)
 
 			}
-			.listStyle(PlainListStyle())
+
 		}
+		.onAppear(perform: {
+			viewModel.onPostAppear()
+		})
 		.navigationTitle(KTLocalizable.postListViewNavigationTitle)
 		.navigationBarTitleDisplayMode(.large)
 	}
 }
 
 struct PostListView_Previews: PreviewProvider {
-    static var previews: some View {
+	static var previews: some View {
 		PostListView()
-    }
+	}
 }

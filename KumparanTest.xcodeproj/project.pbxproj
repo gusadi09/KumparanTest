@@ -29,6 +29,18 @@
 		EC184E9C27AB63DF002F9B5C /* KTLocalizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC184E9B27AB63DF002F9B5C /* KTLocalizable.swift */; };
 		EC184EA027AB6852002F9B5C /* PostCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC184E9F27AB6852002F9B5C /* PostCardView.swift */; };
 		EC184EA527AB687F002F9B5C /* PostCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC184EA427AB687F002F9B5C /* PostCardViewModel.swift */; };
+		EC184EA827AB7822002F9B5C /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC184EA727AB7822002F9B5C /* Post.swift */; };
+		EC184EB227AC38FF002F9B5C /* PostTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC184EB127AC38FF002F9B5C /* PostTargetType.swift */; };
+		EC184EB427AC3915002F9B5C /* PostRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC184EB327AC3915002F9B5C /* PostRemoteDataSource.swift */; };
+		EC184EB627AC3926002F9B5C /* PostDefaultRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC184EB527AC3926002F9B5C /* PostDefaultRemoteDataSource.swift */; };
+		EC184EB827AC3BB8002F9B5C /* PostRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC184EB727AC3BB8002F9B5C /* PostRepository.swift */; };
+		EC184EBA27AC3BCC002F9B5C /* PostDefaultRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC184EB927AC3BCC002F9B5C /* PostDefaultRepository.swift */; };
+		EC184EBC27AC9260002F9B5C /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC184EBB27AC9260002F9B5C /* Users.swift */; };
+		EC184EC027AC9354002F9B5C /* UsersRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC184EBF27AC9354002F9B5C /* UsersRepository.swift */; };
+		EC184EC227AC9361002F9B5C /* UsersDefaultRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC184EC127AC9361002F9B5C /* UsersDefaultRepository.swift */; };
+		EC184EC527AC9373002F9B5C /* UsersTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC184EC427AC9373002F9B5C /* UsersTargetType.swift */; };
+		EC184EC727AC937F002F9B5C /* UsersRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC184EC627AC937F002F9B5C /* UsersRemoteDataSource.swift */; };
+		EC184EC927AC9390002F9B5C /* UsersDefaultRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC184EC827AC9390002F9B5C /* UsersDefaultRemoteDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +82,18 @@
 		EC184E9B27AB63DF002F9B5C /* KTLocalizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KTLocalizable.swift; sourceTree = "<group>"; };
 		EC184E9F27AB6852002F9B5C /* PostCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCardView.swift; sourceTree = "<group>"; };
 		EC184EA427AB687F002F9B5C /* PostCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCardViewModel.swift; sourceTree = "<group>"; };
+		EC184EA727AB7822002F9B5C /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		EC184EB127AC38FF002F9B5C /* PostTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTargetType.swift; sourceTree = "<group>"; };
+		EC184EB327AC3915002F9B5C /* PostRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRemoteDataSource.swift; sourceTree = "<group>"; };
+		EC184EB527AC3926002F9B5C /* PostDefaultRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDefaultRemoteDataSource.swift; sourceTree = "<group>"; };
+		EC184EB727AC3BB8002F9B5C /* PostRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRepository.swift; sourceTree = "<group>"; };
+		EC184EB927AC3BCC002F9B5C /* PostDefaultRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDefaultRepository.swift; sourceTree = "<group>"; };
+		EC184EBB27AC9260002F9B5C /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
+		EC184EBF27AC9354002F9B5C /* UsersRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersRepository.swift; sourceTree = "<group>"; };
+		EC184EC127AC9361002F9B5C /* UsersDefaultRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersDefaultRepository.swift; sourceTree = "<group>"; };
+		EC184EC427AC9373002F9B5C /* UsersTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersTargetType.swift; sourceTree = "<group>"; };
+		EC184EC627AC937F002F9B5C /* UsersRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersRemoteDataSource.swift; sourceTree = "<group>"; };
+		EC184EC827AC9390002F9B5C /* UsersDefaultRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersDefaultRemoteDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +183,7 @@
 		EC184E7127AB5B15002F9B5C /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				EC184EA627AB7817002F9B5C /* Model */,
 				EC184E9D27AB6834002F9B5C /* Component */,
 				EC184E9427AB63A4002F9B5C /* Localizable */,
 				EC184E9127AB6183002F9B5C /* Enum */,
@@ -216,6 +241,8 @@
 		EC184E8627AB5EF0002F9B5C /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				EC184EBD27AC933D002F9B5C /* Users */,
+				EC184EAE27AC38AC002F9B5C /* Post */,
 				EC184E8927AB5F70002F9B5C /* Reusables */,
 			);
 			path = Data;
@@ -310,6 +337,71 @@
 				EC184EA427AB687F002F9B5C /* PostCardViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EC184EA627AB7817002F9B5C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EC184EA727AB7822002F9B5C /* Post.swift */,
+				EC184EBB27AC9260002F9B5C /* Users.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EC184EAE27AC38AC002F9B5C /* Post */ = {
+			isa = PBXGroup;
+			children = (
+				EC184EB927AC3BCC002F9B5C /* PostDefaultRepository.swift */,
+				EC184EB727AC3BB8002F9B5C /* PostRepository.swift */,
+				EC184EAF27AC38CE002F9B5C /* Remote */,
+			);
+			path = Post;
+			sourceTree = "<group>";
+		};
+		EC184EAF27AC38CE002F9B5C /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				EC184EB027AC38DF002F9B5C /* TargetType */,
+				EC184EB327AC3915002F9B5C /* PostRemoteDataSource.swift */,
+				EC184EB527AC3926002F9B5C /* PostDefaultRemoteDataSource.swift */,
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		EC184EB027AC38DF002F9B5C /* TargetType */ = {
+			isa = PBXGroup;
+			children = (
+				EC184EB127AC38FF002F9B5C /* PostTargetType.swift */,
+			);
+			path = TargetType;
+			sourceTree = "<group>";
+		};
+		EC184EBD27AC933D002F9B5C /* Users */ = {
+			isa = PBXGroup;
+			children = (
+				EC184EBE27AC9343002F9B5C /* Remote */,
+				EC184EBF27AC9354002F9B5C /* UsersRepository.swift */,
+				EC184EC127AC9361002F9B5C /* UsersDefaultRepository.swift */,
+			);
+			path = Users;
+			sourceTree = "<group>";
+		};
+		EC184EBE27AC9343002F9B5C /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				EC184EC327AC9364002F9B5C /* TargetType */,
+				EC184EC627AC937F002F9B5C /* UsersRemoteDataSource.swift */,
+				EC184EC827AC9390002F9B5C /* UsersDefaultRemoteDataSource.swift */,
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		EC184EC327AC9364002F9B5C /* TargetType */ = {
+			isa = PBXGroup;
+			children = (
+				EC184EC427AC9373002F9B5C /* UsersTargetType.swift */,
+			);
+			path = TargetType;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -456,14 +548,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC184E4A27AB5B06002F9B5C /* PostListView.swift in Sources */,
+				EC184EC227AC9361002F9B5C /* UsersDefaultRepository.swift in Sources */,
+				EC184EBA27AC3BCC002F9B5C /* PostDefaultRepository.swift in Sources */,
+				EC184EC927AC9390002F9B5C /* UsersDefaultRemoteDataSource.swift in Sources */,
+				EC184EB827AC3BB8002F9B5C /* PostRepository.swift in Sources */,
+				EC184EA827AB7822002F9B5C /* Post.swift in Sources */,
+				EC184EB227AC38FF002F9B5C /* PostTargetType.swift in Sources */,
 				EC184E4827AB5B06002F9B5C /* KumparanTestApp.swift in Sources */,
+				EC184EC527AC9373002F9B5C /* UsersTargetType.swift in Sources */,
 				EC184E7C27AB5BB3002F9B5C /* PostListViewModel.swift in Sources */,
+				EC184EB427AC3915002F9B5C /* PostRemoteDataSource.swift in Sources */,
 				EC184E8E27AB5FB1002F9B5C /* MoyaProvider+DefaultProvider.swift in Sources */,
+				EC184EBC27AC9260002F9B5C /* Users.swift in Sources */,
+				EC184EC027AC9354002F9B5C /* UsersRepository.swift in Sources */,
 				EC184EA027AB6852002F9B5C /* PostCardView.swift in Sources */,
+				EC184EB627AC3926002F9B5C /* PostDefaultRemoteDataSource.swift in Sources */,
 				EC184E9327AB6191002F9B5C /* KTErrorMessage.swift in Sources */,
 				EC184E8C27AB5F91002F9B5C /* KumparanTestTargetType.swift in Sources */,
 				EC184E9027AB5FC7002F9B5C /* MoyaProvider+RequestAsync.swift in Sources */,
 				EC184EA527AB687F002F9B5C /* PostCardViewModel.swift in Sources */,
+				EC184EC727AC937F002F9B5C /* UsersRemoteDataSource.swift in Sources */,
 				EC184E9C27AB63DF002F9B5C /* KTLocalizable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

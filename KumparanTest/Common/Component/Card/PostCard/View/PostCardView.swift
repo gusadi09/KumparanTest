@@ -8,31 +8,32 @@
 import SwiftUI
 
 struct PostCardView: View {
+
+	@ObservedObject var viewModel = PostCardViewModel()
+	@Binding var usersData: UsersResponse
+	@Binding var postItem: Post
+
     var body: some View {
 		VStack(alignment: .leading, spacing: 10) {
-			Text("Post Title")
+			Text(viewModel.postTitle(with: postItem))
 				.font(.headline)
 
-			Text("Post Body")
+			Text(viewModel.postBody(with: postItem))
 				.font(.subheadline)
 				.lineLimit(1)
 
 			HStack {
-				Text("username")
+				Text(viewModel.username)
 
-				Text("company name")
-
-				Spacer()
+				Text(viewModel.userCompanyName)
 			}
 			.foregroundColor(.gray)
 			.font(.footnote)
 		}
 		.contentShape(Rectangle())
-    }
-}
-
-struct PostCardView_Previews: PreviewProvider {
-    static var previews: some View {
-        PostCardView()
+		.onAppear {
+			viewModel.getUsername(by: usersData, with: postItem)
+			viewModel.getUsersCompanyName(by: usersData, with: postItem)
+		}
     }
 }

@@ -8,6 +8,9 @@
 
 // MARK: - General
 "server_error_text" = "Can't load data from server";
+"data_empty_text" = "Uh oh, the data is empty :(";
+"ok_text" = "OK";
+"attention_text" = "Attention"
 
 // MARK: - Post List View
 "post_list_view_navigation_title" = "Posts";
