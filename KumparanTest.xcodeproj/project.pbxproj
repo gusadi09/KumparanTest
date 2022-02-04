@@ -41,6 +41,8 @@
 		EC184EC527AC9373002F9B5C /* UsersTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC184EC427AC9373002F9B5C /* UsersTargetType.swift */; };
 		EC184EC727AC937F002F9B5C /* UsersRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC184EC627AC937F002F9B5C /* UsersRemoteDataSource.swift */; };
 		EC184EC927AC9390002F9B5C /* UsersDefaultRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC184EC827AC9390002F9B5C /* UsersDefaultRemoteDataSource.swift */; };
+		EC184ECE27ACAC2E002F9B5C /* DetailPostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC184ECD27ACAC2E002F9B5C /* DetailPostViewModel.swift */; };
+		EC184ED027ACAC3D002F9B5C /* DetailPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC184ECF27ACAC3D002F9B5C /* DetailPostView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +96,8 @@
 		EC184EC427AC9373002F9B5C /* UsersTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersTargetType.swift; sourceTree = "<group>"; };
 		EC184EC627AC937F002F9B5C /* UsersRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersRemoteDataSource.swift; sourceTree = "<group>"; };
 		EC184EC827AC9390002F9B5C /* UsersDefaultRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersDefaultRemoteDataSource.swift; sourceTree = "<group>"; };
+		EC184ECD27ACAC2E002F9B5C /* DetailPostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPostViewModel.swift; sourceTree = "<group>"; };
+		EC184ECF27ACAC3D002F9B5C /* DetailPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPostView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				EC184E7127AB5B15002F9B5C /* Common */,
+				EC184ECA27ACAC0A002F9B5C /* DetailPost */,
 				EC184E7827AB5B91002F9B5C /* PostList */,
 				EC184E4D27AB5B09002F9B5C /* Preview Content */,
 			);
@@ -404,6 +409,31 @@
 			path = TargetType;
 			sourceTree = "<group>";
 		};
+		EC184ECA27ACAC0A002F9B5C /* DetailPost */ = {
+			isa = PBXGroup;
+			children = (
+				EC184ECC27ACAC1C002F9B5C /* ViewModel */,
+				EC184ECB27ACAC18002F9B5C /* View */,
+			);
+			path = DetailPost;
+			sourceTree = "<group>";
+		};
+		EC184ECB27ACAC18002F9B5C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EC184ECF27ACAC3D002F9B5C /* DetailPostView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EC184ECC27ACAC1C002F9B5C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EC184ECD27ACAC2E002F9B5C /* DetailPostViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -548,6 +578,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC184E4A27AB5B06002F9B5C /* PostListView.swift in Sources */,
+				EC184ECE27ACAC2E002F9B5C /* DetailPostViewModel.swift in Sources */,
 				EC184EC227AC9361002F9B5C /* UsersDefaultRepository.swift in Sources */,
 				EC184EBA27AC3BCC002F9B5C /* PostDefaultRepository.swift in Sources */,
 				EC184EC927AC9390002F9B5C /* UsersDefaultRemoteDataSource.swift in Sources */,
@@ -557,6 +588,7 @@
 				EC184E4827AB5B06002F9B5C /* KumparanTestApp.swift in Sources */,
 				EC184EC527AC9373002F9B5C /* UsersTargetType.swift in Sources */,
 				EC184E7C27AB5BB3002F9B5C /* PostListViewModel.swift in Sources */,
+				EC184ED027ACAC3D002F9B5C /* DetailPostView.swift in Sources */,
 				EC184EB427AC3915002F9B5C /* PostRemoteDataSource.swift in Sources */,
 				EC184E8E27AB5FB1002F9B5C /* MoyaProvider+DefaultProvider.swift in Sources */,
 				EC184EBC27AC9260002F9B5C /* Users.swift in Sources */,
