@@ -43,6 +43,8 @@
 		EC184EC927AC9390002F9B5C /* UsersDefaultRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC184EC827AC9390002F9B5C /* UsersDefaultRemoteDataSource.swift */; };
 		EC184ECE27ACAC2E002F9B5C /* DetailPostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC184ECD27ACAC2E002F9B5C /* DetailPostViewModel.swift */; };
 		EC184ED027ACAC3D002F9B5C /* DetailPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC184ECF27ACAC3D002F9B5C /* DetailPostView.swift */; };
+		EC184ED527ACB0FF002F9B5C /* CommentCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC184ED427ACB0FF002F9B5C /* CommentCardView.swift */; };
+		EC184ED727ACB118002F9B5C /* CommentCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC184ED627ACB118002F9B5C /* CommentCardViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +100,8 @@
 		EC184EC827AC9390002F9B5C /* UsersDefaultRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersDefaultRemoteDataSource.swift; sourceTree = "<group>"; };
 		EC184ECD27ACAC2E002F9B5C /* DetailPostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPostViewModel.swift; sourceTree = "<group>"; };
 		EC184ECF27ACAC3D002F9B5C /* DetailPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPostView.swift; sourceTree = "<group>"; };
+		EC184ED427ACB0FF002F9B5C /* CommentCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCardView.swift; sourceTree = "<group>"; };
+		EC184ED627ACB118002F9B5C /* CommentCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCardViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -314,6 +318,7 @@
 		EC184E9E27AB6847002F9B5C /* Card */ = {
 			isa = PBXGroup;
 			children = (
+				EC184ED127ACB0C5002F9B5C /* CommentCard */,
 				EC184EA127AB6859002F9B5C /* PostCard */,
 			);
 			path = Card;
@@ -432,6 +437,31 @@
 				EC184ECD27ACAC2E002F9B5C /* DetailPostViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EC184ED127ACB0C5002F9B5C /* CommentCard */ = {
+			isa = PBXGroup;
+			children = (
+				EC184ED327ACB0DF002F9B5C /* View */,
+				EC184ED227ACB0D6002F9B5C /* ViewModel */,
+			);
+			path = CommentCard;
+			sourceTree = "<group>";
+		};
+		EC184ED227ACB0D6002F9B5C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EC184ED627ACB118002F9B5C /* CommentCardViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EC184ED327ACB0DF002F9B5C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EC184ED427ACB0FF002F9B5C /* CommentCardView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -593,6 +623,8 @@
 				EC184E8E27AB5FB1002F9B5C /* MoyaProvider+DefaultProvider.swift in Sources */,
 				EC184EBC27AC9260002F9B5C /* Users.swift in Sources */,
 				EC184EC027AC9354002F9B5C /* UsersRepository.swift in Sources */,
+				EC184ED727ACB118002F9B5C /* CommentCardViewModel.swift in Sources */,
+				EC184ED527ACB0FF002F9B5C /* CommentCardView.swift in Sources */,
 				EC184EA027AB6852002F9B5C /* PostCardView.swift in Sources */,
 				EC184EB627AC3926002F9B5C /* PostDefaultRemoteDataSource.swift in Sources */,
 				EC184E9327AB6191002F9B5C /* KTErrorMessage.swift in Sources */,

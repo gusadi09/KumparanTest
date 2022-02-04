@@ -9,11 +9,13 @@ import SwiftUI
 
 struct DetailPostView: View {
     var body: some View {
-		ScrollView(.vertical, showsIndicators: true) {
-			VStack(spacing: 30) {
+		ScrollView(.vertical, showsIndicators: false) {
+			VStack(spacing: 10) {
 				PostHeader()
 
 				PostBody()
+
+				CommentSection()
 			}
 		}
 		.navigationTitle("Post Detail")
@@ -28,6 +30,8 @@ extension DetailPostView {
 				VStack(alignment: .leading, spacing: 15) {
 
 					Text("unt aut facere repellat provident occaecati excepturi optio reprehenderit")
+						.font(.title2)
+						.bold()
 
 					Button {
 
@@ -39,7 +43,9 @@ extension DetailPostView {
 								.foregroundColor(.gray)
 
 							Text("Bret")
+								.font(.subheadline)
 								.underline()
+								.bold()
 						}
 					}
 
@@ -47,6 +53,7 @@ extension DetailPostView {
 
 				Spacer()
 			}
+			.padding()
 
 		}
 	}
@@ -63,10 +70,33 @@ extension DetailPostView {
 				Spacer()
 
 			}
+			.padding(.horizontal)
+			.padding(.bottom)
 		}
 	}
 
-	
+	struct CommentSection: View {
+		var body: some View {
+			VStack(alignment: .leading, spacing: 10) {
+				Text("Comment")
+					.font(.headline)
+					.padding(.horizontal)
+
+				ForEach(0...3, id: \.self) { item in
+					VStack {
+						HStack {
+							CommentCardView()
+								.padding()
+
+							Spacer()
+						}
+
+						Divider()
+					}
+				}
+			}
+		}
+	}
 }
 
 struct DetailPostView_Previews: PreviewProvider {
