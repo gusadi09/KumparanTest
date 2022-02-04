@@ -15,40 +15,52 @@ struct PostListView: View {
 		ZStack {
 
 			Group {
-				if let postData = viewModel.postData {
-					List(postData.indices, id: \.self) { item in
+				if !viewModel.isPostDataEmpty() {
+					List {
 
-						Button {
-							print(postData[item].title ?? "")
-						} label: {
-							PostCardView(
-								viewModel: PostCardViewModel(
-									postItem: postData[item]
+						ForEach($viewModel.postData, id: \.id) { item in
+
+							Button {
+								print(item)
+							} label: {
+								PostCardView(
+									usersData: $viewModel.usersData,
+									postItem: item
 								)
-							)
-								.padding(.vertical, 10)
+									.padding(.vertical, 10)
+							}
+							.buttonStyle(PlainButtonStyle())
 						}
-						.buttonStyle(PlainButtonStyle())
 
 					}
 					.listStyle(PlainListStyle())
-					.refreshable {
-						await viewModel.getPost()
-					}
-				} else if !viewModel.isLoading && viewModel.isPostDataEmpty(){
+
+				} else if !viewModel.isLoading && viewModel.isPostDataEmpty() {
 					VStack {
 						Spacer()
 
-						Text("Uh oh, the data is empty :(")
+						Text(KTLocalizable.dataEmptyText)
 
 						Spacer()
 					}
+
 				}
 			}
+			.alert(isPresented: $viewModel.isError) {
+				Alert(
+					title: Text(KTLocalizable.attentionText),
+					message: Text(viewModel.errorMessageText()),
+					dismissButton: .default(
+						Text(KTLocalizable.okText)
+					)
+				)
+			}
+			
 
 			if viewModel.isLoading {
 				ProgressView()
 					.progressViewStyle(.circular)
+
 			}
 
 		}
@@ -61,7 +73,7 @@ struct PostListView: View {
 }
 
 struct PostListView_Previews: PreviewProvider {
-    static var previews: some View {
+	static var previews: some View {
 		PostListView()
-    }
+	}
 }
