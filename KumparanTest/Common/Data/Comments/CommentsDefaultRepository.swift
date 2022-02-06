@@ -6,3 +6,16 @@
 //
 
 import Foundation
+
+final class CommentsDefaultRepository: CommentsRepository {
+
+	private let remoteDataSource: CommentsRemoteDataSource
+
+	init(remoteDataSource: CommentsRemoteDataSource = CommentsDefaultRemoteDataSource()) {
+		self.remoteDataSource = remoteDataSource
+	}
+
+	func provideGetComments() async throws -> CommentsResponse {
+		try await self.remoteDataSource.getComments()
+	}
+}

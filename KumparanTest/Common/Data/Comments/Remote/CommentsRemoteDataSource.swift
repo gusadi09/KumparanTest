@@ -6,3 +6,7 @@
 //
 
 import Foundation
+
+protocol CommentsRemoteDataSource {
+	func getComments() async throws -> CommentsResponse
+}
