@@ -20,16 +20,18 @@ struct PostListView: View {
 
 						ForEach($viewModel.postData, id: \.id) { item in
 
-							Button {
-								print(item)
+							NavigationLink {
+								DetailPostView(post: item, user: $viewModel.usersData)
 							} label: {
 								PostCardView(
-									usersData: $viewModel.usersData,
-									postItem: item
+									viewModel: PostCardViewModel(
+										postItem: item.wrappedValue,
+										user: viewModel.usersData
+									)
 								)
 									.padding(.vertical, 10)
 							}
-							.buttonStyle(PlainButtonStyle())
+							.isDetailLink(true)
 						}
 
 					}

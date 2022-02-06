@@ -8,14 +8,22 @@
 import SwiftUI
 
 struct DetailPostView: View {
+
+	@ObservedObject var viewModel = DetailPostViewModel()
+	@Binding var post: Post
+	@Binding var user: UsersResponse
+	
     var body: some View {
 		ScrollView(.vertical, showsIndicators: false) {
 			VStack(spacing: 10) {
-				PostHeader()
+				PostHeader(viewModel: viewModel, post: $post, user: $user)
 
-				PostBody()
+				PostBody(viewModel: viewModel, post: $post)
 
-				CommentSection()
+				CommentSection(viewModel: viewModel, post: $post)
+			}
+			.onAppear {
+				viewModel.onDetailAppear(by: post.id ?? 0)
 			}
 		}
 		.navigationTitle("Post Detail")
@@ -25,11 +33,16 @@ struct DetailPostView: View {
 extension DetailPostView {
 
 	struct PostHeader: View {
+
+		@ObservedObject var viewModel: DetailPostViewModel
+		@Binding var post: Post
+		@Binding var user: UsersResponse
+
 		var body: some View {
 			HStack {
 				VStack(alignment: .leading, spacing: 15) {
 
-					Text("unt aut facere repellat provident occaecati excepturi optio reprehenderit")
+					Text(viewModel.postTitle(post: post))
 						.font(.title2)
 						.bold()
 
@@ -42,7 +55,7 @@ extension DetailPostView {
 								.frame(height: 40)
 								.foregroundColor(.gray)
 
-							Text("Bret")
+							Text(viewModel.author)
 								.font(.subheadline)
 								.underline()
 								.bold()
@@ -54,15 +67,22 @@ extension DetailPostView {
 				Spacer()
 			}
 			.padding()
+			.onAppear {
+				viewModel.postAuthor(user: user, postItem: post)
+			}
 
 		}
 	}
 
 	struct PostBody: View {
+
+		@ObservedObject var viewModel: DetailPostViewModel
+		@Binding var post: Post
+
 		var body: some View {
 			HStack {
 				VStack(alignment: .leading, spacing: 10) {
-					Text("quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto")
+					Text(viewModel.postBody(post: post))
 						.multilineTextAlignment(.leading)
 
 				}
@@ -76,31 +96,46 @@ extension DetailPostView {
 	}
 
 	struct CommentSection: View {
+
+		@ObservedObject var viewModel: DetailPostViewModel
+		@Binding var post: Post
+
 		var body: some View {
-			VStack(alignment: .leading, spacing: 10) {
-				Text("Comment")
-					.font(.headline)
+			VStack(alignment: .center, spacing: 10) {
+				HStack {
+					Text("Comment")
+						.font(.headline)
 					.padding(.horizontal)
 
-				ForEach(0...3, id: \.self) { item in
-					VStack {
-						HStack {
-							CommentCardView()
-								.padding()
+					Spacer()
+				}
 
-							Spacer()
+				if let commentData = viewModel.commentData.filter({ comment in
+					comment.postId == post.id
+				}) {
+					ForEach(commentData, id: \.id) { item in
+						VStack {
+							HStack {
+								CommentCardView(viewModel: CommentCardViewModel(comment: item))
+									.padding()
+
+								Spacer()
+							}
+
+							Divider()
 						}
+					}
+				} else if viewModel.isLoading {
+					VStack {
+						Spacer()
 
-						Divider()
+						ProgressView()
+							.progressViewStyle(.circular)
+
+						Spacer()
 					}
 				}
 			}
 		}
 	}
-}
-
-struct DetailPostView_Previews: PreviewProvider {
-    static var previews: some View {
-        DetailPostView()
-    }
 }

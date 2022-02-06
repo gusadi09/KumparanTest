@@ -17,24 +17,71 @@ final class PostCardViewModel: ObservableObject {
 
 	@Published var userCompanyName = ""
 
-	func postTitle(with postItem: Post) -> String {
+	private let usersRepository: UsersRepository
+
+	@Published var usersData: Users?
+	@Published var isError = false
+	@Published var postItem: Post
+	@Published var user: UsersResponse
+
+	init(usersRepository: UsersRepository = UsersDefaultRepository(), postItem: Post, user: UsersResponse) {
+		self.usersRepository = usersRepository
+		self.postItem = postItem
+		self.user = user
+	}
+
+	func postTitle() -> String {
 		postItem.title ?? ""
 	}
 
-	func postBody(with postItem: Post) -> String {
+	func postBody() -> String {
 		postItem.body ?? ""
 	}
 
-	func getUsername(by data: UsersResponse, with postItem: Post) {
-		for item in data where item.id == postItem.userId {
-			self.username = item.username ?? ""
-
+	func getUsername() {
+		for items in user where items.id == postItem.userId {
+			self.username = items.username ?? ""
+		}
+	}
+	
+	func getUsersCompanyName() {
+		for items in user where items.id == postItem.userId {
+			self.userCompanyName = items.company?.name ?? ""
 		}
 	}
 
-	func getUsersCompanyName(by data: UsersResponse, with postItem: Post) {
-		for item in data where item.id == postItem.userId {
-			self.userCompanyName = item.company?.name ?? ""
+	@MainActor func fetchPostStarted() {
+		self.isLoading = true
+		self.error = nil
+		self.isError = false
+	}
+
+	func getUsers(by id: UInt) async {
+		await fetchPostStarted()
+
+		do {
+			let response = try await usersRepository.provideGetDetailUsers(by: id)
+
+			DispatchQueue.main.async { [weak self] in
+				self?.isLoading = false
+
+				self?.usersData = response
+			}
+
+		} catch let error as KTErrorMessage {
+			DispatchQueue.main.async { [weak self] in
+				self?.isLoading = false
+				self?.error = error
+				self?.isError = true
+			}
+
+		} catch {
+			DispatchQueue.main.async { [weak self] in
+				self?.isLoading = false
+				self?.error = .clientError(message: error)
+				self?.isError = true
+			}
+
 		}
 	}
 }

@@ -18,6 +18,8 @@ final class PostListViewModel: ObservableObject {
 	@Published var error: KTErrorMessage?
 	@Published var isError = false
 
+	@Published var isMoveToDetail = false
+
 	init(
 		repository: PostRepository = PostDefaultRepository(),
 		usersRepository: UsersRepository = UsersDefaultRepository()
@@ -66,7 +68,11 @@ final class PostListViewModel: ObservableObject {
 
 	func onPostAppear() {
 		Task.init {
-			await getUsers()
+
+			if usersData.isEmpty {
+				await getUsers()
+			}
+			
 			await getPost()
 		}
 	}

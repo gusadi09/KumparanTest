@@ -19,4 +19,8 @@ final class UsersDefaultRemoteDataSource: UsersRemoteDataSource {
 	func getUsers() async throws -> UsersResponse {
 		try await self.provider.requestAsync(.getUser, model: UsersResponse.self)
 	}
+
+	func getUsersDetail(by usersId: UInt) async throws -> Users {
+		try await self.provider.requestAsync(.getUserDetail(usersId), model: Users.self)
+	}
 }

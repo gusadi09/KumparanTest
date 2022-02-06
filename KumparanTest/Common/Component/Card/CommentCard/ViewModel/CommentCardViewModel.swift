@@ -8,5 +8,18 @@
 import Foundation
 
 final class CommentCardViewModel: ObservableObject {
-	
+
+	@Published var comment: Comment
+
+	init(comment: Comment) {
+		self.comment = comment
+	}
+
+	func commentAuthor() -> String {
+		self.comment.name ?? ""
+	}
+
+	func commentBody() -> String {
+		self.comment.body ?? ""
+	}
 }

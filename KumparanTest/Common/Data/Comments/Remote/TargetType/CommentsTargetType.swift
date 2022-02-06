@@ -1,29 +1,29 @@
 //
-//  UsersTargetType.swift
+//  CommentsTargetType.swift
 //  KumparanTest
 //
-//  Created by Gus Adi on 04/02/22.
+//  Created by Gus Adi on 06/02/22.
 //
 
 import Foundation
 import Moya
 
-enum UsersTargetType {
-	case getUser
-	case getUserDetail(UInt)
+enum CommentsTargetType {
+	case getComments(UInt)
 }
 
-extension UsersTargetType: KumparanTestTargetType {
+extension CommentsTargetType: KumparanTestTargetType {
 	var parameters: [String : Any] {
-		return [:]
+		switch self {
+			case .getComments(let postId):
+				return ["postId": postId]
+		}
 	}
 
 	var path: String {
 		switch self {
-			case .getUser:
-				return "/users"
-			case .getUserDetail(let usersId):
-				return "/users/\(usersId)"
+			case .getComments:
+				return "/comments"
 		}
 	}
 
@@ -37,9 +37,7 @@ extension UsersTargetType: KumparanTestTargetType {
 
 	var method: Moya.Method {
 		switch self {
-			case .getUser:
-				return .get
-			case .getUserDetail:
+			case .getComments:
 				return .get
 		}
 	}

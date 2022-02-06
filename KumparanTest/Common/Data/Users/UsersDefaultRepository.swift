@@ -18,4 +18,8 @@ final class UsersDefaultRepository: UsersRepository {
 	func provideGetUsers() async throws -> UsersResponse {
 		try await self.remoteDataSource.getUsers()
 	}
+
+	func provideGetDetailUsers(by usersId: UInt) async throws -> Users {
+		try await self.remoteDataSource.getUsersDetail(by: usersId)
+	}
 }

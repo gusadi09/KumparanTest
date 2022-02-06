@@ -9,4 +9,5 @@ import Foundation
 
 protocol UsersRemoteDataSource {
 	func getUsers() async throws -> UsersResponse
+	func getUsersDetail(by usersId: UInt) async throws -> Users
 }
