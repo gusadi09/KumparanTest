@@ -46,11 +46,11 @@
 		EC184ED527ACB0FF002F9B5C /* CommentCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC184ED427ACB0FF002F9B5C /* CommentCardView.swift */; };
 		EC184ED727ACB118002F9B5C /* CommentCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC184ED627ACB118002F9B5C /* CommentCardViewModel.swift */; };
 		ECC80CCF27AF9CA60024748C /* Comments.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC80CCE27AF9CA60024748C /* Comments.swift */; };
-		ECC80CD327AF9D170024748C /* CommentsRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC80CD227AF9D170024748C /* CommentsRemoteDataSource.swift */; };
-		ECC80CD527AF9D5A0024748C /* CommentsDefaultRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC80CD427AF9D5A0024748C /* CommentsDefaultRemoteDataSource.swift */; };
-		ECC80CD927AF9D740024748C /* CommentsDefaultRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC80CD827AF9D740024748C /* CommentsDefaultRepository.swift */; };
-		ECC80CDC27AF9D850024748C /* CommentsTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC80CDB27AF9D850024748C /* CommentsTargetType.swift */; };
-		ECC80CE027AF9F600024748C /* CommentsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC80CDF27AF9F600024748C /* CommentsRepository.swift */; };
+		ECC80CE227B028280024748C /* CommentsTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC80CE127B028280024748C /* CommentsTargetType.swift */; };
+		ECC80CE527B028390024748C /* CommentsDefaultRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC80CE327B028380024748C /* CommentsDefaultRemoteDataSource.swift */; };
+		ECC80CE627B028390024748C /* CommentsRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC80CE427B028390024748C /* CommentsRemoteDataSource.swift */; };
+		ECC80CE927B028470024748C /* CommentsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC80CE727B028460024748C /* CommentsRepository.swift */; };
+		ECC80CEA27B028470024748C /* CommentsDefaultRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC80CE827B028460024748C /* CommentsDefaultRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,11 +109,11 @@
 		EC184ED427ACB0FF002F9B5C /* CommentCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCardView.swift; sourceTree = "<group>"; };
 		EC184ED627ACB118002F9B5C /* CommentCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCardViewModel.swift; sourceTree = "<group>"; };
 		ECC80CCE27AF9CA60024748C /* Comments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comments.swift; sourceTree = "<group>"; };
-		ECC80CD227AF9D170024748C /* CommentsRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsRemoteDataSource.swift; sourceTree = "<group>"; };
-		ECC80CD427AF9D5A0024748C /* CommentsDefaultRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsDefaultRemoteDataSource.swift; sourceTree = "<group>"; };
-		ECC80CD827AF9D740024748C /* CommentsDefaultRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsDefaultRepository.swift; sourceTree = "<group>"; };
-		ECC80CDB27AF9D850024748C /* CommentsTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsTargetType.swift; sourceTree = "<group>"; };
-		ECC80CDF27AF9F600024748C /* CommentsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsRepository.swift; sourceTree = "<group>"; };
+		ECC80CE127B028280024748C /* CommentsTargetType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentsTargetType.swift; sourceTree = "<group>"; };
+		ECC80CE327B028380024748C /* CommentsDefaultRemoteDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentsDefaultRemoteDataSource.swift; sourceTree = "<group>"; };
+		ECC80CE427B028390024748C /* CommentsRemoteDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentsRemoteDataSource.swift; sourceTree = "<group>"; };
+		ECC80CE727B028460024748C /* CommentsRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentsRepository.swift; sourceTree = "<group>"; };
+		ECC80CE827B028460024748C /* CommentsDefaultRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentsDefaultRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -481,9 +481,9 @@
 		ECC80CD027AF9CFA0024748C /* Comments */ = {
 			isa = PBXGroup;
 			children = (
+				ECC80CE827B028460024748C /* CommentsDefaultRepository.swift */,
+				ECC80CE727B028460024748C /* CommentsRepository.swift */,
 				ECC80CD127AF9D020024748C /* Remote */,
-				ECC80CD827AF9D740024748C /* CommentsDefaultRepository.swift */,
-				ECC80CDF27AF9F600024748C /* CommentsRepository.swift */,
 			);
 			path = Comments;
 			sourceTree = "<group>";
@@ -491,9 +491,9 @@
 		ECC80CD127AF9D020024748C /* Remote */ = {
 			isa = PBXGroup;
 			children = (
+				ECC80CE327B028380024748C /* CommentsDefaultRemoteDataSource.swift */,
+				ECC80CE427B028390024748C /* CommentsRemoteDataSource.swift */,
 				ECC80CDA27AF9D7A0024748C /* TargetType */,
-				ECC80CD227AF9D170024748C /* CommentsRemoteDataSource.swift */,
-				ECC80CD427AF9D5A0024748C /* CommentsDefaultRemoteDataSource.swift */,
 			);
 			path = Remote;
 			sourceTree = "<group>";
@@ -501,7 +501,7 @@
 		ECC80CDA27AF9D7A0024748C /* TargetType */ = {
 			isa = PBXGroup;
 			children = (
-				ECC80CDB27AF9D850024748C /* CommentsTargetType.swift */,
+				ECC80CE127B028280024748C /* CommentsTargetType.swift */,
 			);
 			path = TargetType;
 			sourceTree = "<group>";
@@ -650,19 +650,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC184E4A27AB5B06002F9B5C /* PostListView.swift in Sources */,
+				ECC80CE927B028470024748C /* CommentsRepository.swift in Sources */,
 				EC184ECE27ACAC2E002F9B5C /* DetailPostViewModel.swift in Sources */,
-				ECC80CDC27AF9D850024748C /* CommentsTargetType.swift in Sources */,
 				EC184EC227AC9361002F9B5C /* UsersDefaultRepository.swift in Sources */,
 				EC184EBA27AC3BCC002F9B5C /* PostDefaultRepository.swift in Sources */,
 				EC184EC927AC9390002F9B5C /* UsersDefaultRemoteDataSource.swift in Sources */,
 				EC184EB827AC3BB8002F9B5C /* PostRepository.swift in Sources */,
-				ECC80CD327AF9D170024748C /* CommentsRemoteDataSource.swift in Sources */,
-				ECC80CD927AF9D740024748C /* CommentsDefaultRepository.swift in Sources */,
+				ECC80CE227B028280024748C /* CommentsTargetType.swift in Sources */,
 				EC184EA827AB7822002F9B5C /* Post.swift in Sources */,
 				EC184EB227AC38FF002F9B5C /* PostTargetType.swift in Sources */,
+				ECC80CE527B028390024748C /* CommentsDefaultRemoteDataSource.swift in Sources */,
 				EC184E4827AB5B06002F9B5C /* KumparanTestApp.swift in Sources */,
 				EC184EC527AC9373002F9B5C /* UsersTargetType.swift in Sources */,
 				EC184E7C27AB5BB3002F9B5C /* PostListViewModel.swift in Sources */,
+				ECC80CEA27B028470024748C /* CommentsDefaultRepository.swift in Sources */,
 				ECC80CCF27AF9CA60024748C /* Comments.swift in Sources */,
 				EC184ED027ACAC3D002F9B5C /* DetailPostView.swift in Sources */,
 				EC184EB427AC3915002F9B5C /* PostRemoteDataSource.swift in Sources */,
@@ -670,14 +671,13 @@
 				EC184EBC27AC9260002F9B5C /* Users.swift in Sources */,
 				EC184EC027AC9354002F9B5C /* UsersRepository.swift in Sources */,
 				EC184ED727ACB118002F9B5C /* CommentCardViewModel.swift in Sources */,
-				ECC80CD527AF9D5A0024748C /* CommentsDefaultRemoteDataSource.swift in Sources */,
 				EC184ED527ACB0FF002F9B5C /* CommentCardView.swift in Sources */,
 				EC184EA027AB6852002F9B5C /* PostCardView.swift in Sources */,
 				EC184EB627AC3926002F9B5C /* PostDefaultRemoteDataSource.swift in Sources */,
-				ECC80CE027AF9F600024748C /* CommentsRepository.swift in Sources */,
 				EC184E9327AB6191002F9B5C /* KTErrorMessage.swift in Sources */,
 				EC184E8C27AB5F91002F9B5C /* KumparanTestTargetType.swift in Sources */,
 				EC184E9027AB5FC7002F9B5C /* MoyaProvider+RequestAsync.swift in Sources */,
+				ECC80CE627B028390024748C /* CommentsRemoteDataSource.swift in Sources */,
 				EC184EA527AB687F002F9B5C /* PostCardViewModel.swift in Sources */,
 				EC184EC727AC937F002F9B5C /* UsersRemoteDataSource.swift in Sources */,
 				EC184E9C27AB63DF002F9B5C /* KTLocalizable.swift in Sources */,
