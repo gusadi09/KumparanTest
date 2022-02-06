@@ -9,16 +9,14 @@ import SwiftUI
 
 struct PostCardView: View {
 
-	@ObservedObject var viewModel = PostCardViewModel()
-	@Binding var usersData: UsersResponse
-	@Binding var postItem: Post
+	@ObservedObject var viewModel: PostCardViewModel
 
     var body: some View {
 		VStack(alignment: .leading, spacing: 10) {
-			Text(viewModel.postTitle(with: postItem))
+			Text(viewModel.postTitle())
 				.font(.headline)
 
-			Text(viewModel.postBody(with: postItem))
+			Text(viewModel.postBody())
 				.font(.subheadline)
 				.lineLimit(1)
 
@@ -32,8 +30,8 @@ struct PostCardView: View {
 		}
 		.contentShape(Rectangle())
 		.onAppear {
-			viewModel.getUsername(by: usersData, with: postItem)
-			viewModel.getUsersCompanyName(by: usersData, with: postItem)
+			viewModel.getUsername()
+			viewModel.getUsersCompanyName()
 		}
     }
 }

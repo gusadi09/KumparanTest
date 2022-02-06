@@ -16,7 +16,7 @@ final class CommentsDefaultRemoteDataSource: CommentsRemoteDataSource {
 		self.provider = provider
 	}
 
-	func getComments() async throws -> CommentsResponse {
-		try await self.provider.requestAsync(.getComments, model: CommentsResponse.self)
+	func getComments(by postId: UInt) async throws -> CommentsResponse {
+		try await self.provider.requestAsync(.getComments(postId), model: CommentsResponse.self)
 	}
 }

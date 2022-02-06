@@ -8,5 +8,5 @@
 import Foundation
 
 protocol CommentsRemoteDataSource {
-	func getComments() async throws -> CommentsResponse
+	func getComments(by postId: UInt) async throws -> CommentsResponse
 }

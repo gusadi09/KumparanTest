@@ -8,12 +8,15 @@
 import SwiftUI
 
 struct CommentCardView: View {
+
+	@ObservedObject var viewModel: CommentCardViewModel
+
 	var body: some View {
 		VStack(alignment: .leading, spacing: 10) {
-			Text("id labore ex et quam laborum")
+			Text(viewModel.commentAuthor())
 				.font(.headline)
 			
-			Text("laudantium enim quasi est quidem magnam voluptate ipsam eos\ntempora quo necessitatibus\ndolor quam autem quasi\nreiciendis et nam sapiente accusantium")
+			Text(viewModel.commentBody())
 				.font(.body)
 			
 		}
@@ -22,6 +25,16 @@ struct CommentCardView: View {
 
 struct CommentCardView_Previews: PreviewProvider {
     static var previews: some View {
-        CommentCardView()
+        CommentCardView(
+			viewModel: CommentCardViewModel(
+				comment: Comment(
+					postId: 1,
+					id: 1,
+					name: "",
+					email: "",
+					body: ""
+				)
+			)
+		)
     }
 }

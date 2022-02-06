@@ -15,7 +15,7 @@ final class CommentsDefaultRepository: CommentsRepository {
 		self.remoteDataSource = remoteDataSource
 	}
 
-	func provideGetComments() async throws -> CommentsResponse {
-		try await self.remoteDataSource.getComments()
+	func provideGetComments(by postId: UInt) async throws -> CommentsResponse {
+		try await self.remoteDataSource.getComments(by: postId)
 	}
 }

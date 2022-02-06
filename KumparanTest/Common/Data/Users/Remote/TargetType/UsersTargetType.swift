@@ -10,6 +10,7 @@ import Moya
 
 enum UsersTargetType {
 	case getUser
+	case getUserDetail(UInt)
 }
 
 extension UsersTargetType: KumparanTestTargetType {
@@ -21,6 +22,8 @@ extension UsersTargetType: KumparanTestTargetType {
 		switch self {
 			case .getUser:
 				return "/users"
+			case .getUserDetail(let usersId):
+				return "/users/\(usersId)"
 		}
 	}
 
@@ -35,6 +38,8 @@ extension UsersTargetType: KumparanTestTargetType {
 	var method: Moya.Method {
 		switch self {
 			case .getUser:
+				return .get
+			case .getUserDetail:
 				return .get
 		}
 	}

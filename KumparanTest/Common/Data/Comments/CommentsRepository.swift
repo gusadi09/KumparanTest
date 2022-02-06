@@ -8,5 +8,5 @@
 import Foundation
 
 protocol CommentsRepository {
-	func provideGetComments() async throws -> CommentsResponse
+	func provideGetComments(by postId: UInt) async throws -> CommentsResponse
 }

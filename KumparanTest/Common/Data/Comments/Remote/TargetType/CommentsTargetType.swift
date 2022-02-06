@@ -9,12 +9,15 @@ import Foundation
 import Moya
 
 enum CommentsTargetType {
-	case getComments
+	case getComments(UInt)
 }
 
 extension CommentsTargetType: KumparanTestTargetType {
 	var parameters: [String : Any] {
-		return [:]
+		switch self {
+			case .getComments(let postId):
+				return ["postId": postId]
+		}
 	}
 
 	var path: String {
