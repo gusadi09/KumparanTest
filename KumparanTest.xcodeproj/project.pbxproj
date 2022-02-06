@@ -50,6 +50,7 @@
 		ECC80CD527AF9D5A0024748C /* CommentsDefaultRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC80CD427AF9D5A0024748C /* CommentsDefaultRemoteDataSource.swift */; };
 		ECC80CD927AF9D740024748C /* CommentsDefaultRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC80CD827AF9D740024748C /* CommentsDefaultRepository.swift */; };
 		ECC80CDC27AF9D850024748C /* CommentsTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC80CDB27AF9D850024748C /* CommentsTargetType.swift */; };
+		ECC80CE027AF9F600024748C /* CommentsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC80CDF27AF9F600024748C /* CommentsRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +113,7 @@
 		ECC80CD427AF9D5A0024748C /* CommentsDefaultRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsDefaultRemoteDataSource.swift; sourceTree = "<group>"; };
 		ECC80CD827AF9D740024748C /* CommentsDefaultRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsDefaultRepository.swift; sourceTree = "<group>"; };
 		ECC80CDB27AF9D850024748C /* CommentsTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsTargetType.swift; sourceTree = "<group>"; };
+		ECC80CDF27AF9F600024748C /* CommentsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -481,6 +483,7 @@
 			children = (
 				ECC80CD127AF9D020024748C /* Remote */,
 				ECC80CD827AF9D740024748C /* CommentsDefaultRepository.swift */,
+				ECC80CDF27AF9F600024748C /* CommentsRepository.swift */,
 			);
 			path = Comments;
 			sourceTree = "<group>";
@@ -671,6 +674,7 @@
 				EC184ED527ACB0FF002F9B5C /* CommentCardView.swift in Sources */,
 				EC184EA027AB6852002F9B5C /* PostCardView.swift in Sources */,
 				EC184EB627AC3926002F9B5C /* PostDefaultRemoteDataSource.swift in Sources */,
+				ECC80CE027AF9F600024748C /* CommentsRepository.swift in Sources */,
 				EC184E9327AB6191002F9B5C /* KTErrorMessage.swift in Sources */,
 				EC184E8C27AB5F91002F9B5C /* KumparanTestTargetType.swift in Sources */,
 				EC184E9027AB5FC7002F9B5C /* MoyaProvider+RequestAsync.swift in Sources */,
